@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+import os
+import time
+
+# Desmontamos las particiones de la tarjeta sd
+os.system('sudo umount /dev/mmcblk0p1 && sudo umount /dev/mmcblk0p2')
+
+time.sleep(20)
+
+# Hace una imagen de la sd y la copia al destino que elijamos
+os.system('sudo pv /dev/mmcblk0 | dd bs=1M of="Ruta de la imagen"')
+Última edición por Drakkar el 10 Jun 2017, 08:47, editado 15 veces en total.
+kamber, Pirossi, Ki
