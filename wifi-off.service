@@ -1,0 +1,10 @@
+[Unit]
+Description=wifi-off
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/pi/wifi-off.sh
+
+[Install]
+WantedBy=multi-user.target
